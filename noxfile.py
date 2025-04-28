@@ -2,7 +2,7 @@ import nox
 
 nox.options.reuse_existing_virtualenvs = True
 
-@nox.session
+@nox.session(python=["3.13"])
 def lint(session: nox.Session) -> None:
     """Run linters."""
     session.install("pre-commit")
